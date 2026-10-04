@@ -258,8 +258,8 @@
 тотальная функция «Видимые корни»
   возвращает список строки
   ["flang/src", "flang/stdlib", "flang/bin", "flang/core", "flang/self", "flang/concurrency", "flang/conc",
-    "flang/proof", "editors", "packaging", "examples", "package.json", "bootstrap", "src", "schema", "flang/cat",
-    "flang/ct", "flang/examples"]
+    "flang/proof", "flang/translation", "editors", "packaging", "examples", "package.json", "bootstrap", "src",
+    "schema", "flang/cat", "flang/ct", "flang/examples"]
 
 тотальная функция «Служебные корни»
   возвращает список строки
@@ -287,7 +287,11 @@
   пример «файл в корне»
     дано путь равно "LICENSE"
     ожидается "LICENSE"
-  пусть части равно (разделить путь по "/")
+  пример «кавычки git снимаются: имя с кавычкой внутри git отдаёт в кавычках»
+    дано путь равно "\"docs/examples/x/y.md\""
+    ожидается "docs"
+  пусть целое равно (соединить (разделить путь по "\"") по "")
+  пусть части равно (разделить целое по "/")
   если ((длина части) больше 1) и притом ((элемент 1 в части) равен "flang")
     то соединить ["flang", (элемент 2 в части)] по "/"
     иначе элемент 1 в части
@@ -1464,4 +1468,4 @@
 
 тотальная функция «Объявление короткой команды changelog:check»
   возвращает строка
-  "bootstrap/flang test && bootstrap/flang test scripts/site/build-changelog.fscript && bootstrap/flang io scripts/site/build-changelog.fscript --plan 'Журнал не отстал' --max-steps 2000000000 — генератор кода проверен своими примерами (прежний --self-test), и журнал совпадает с историей"
+  "bootstrap/flang test && bootstrap/flang io scripts/site/build-changelog.fscript --plan 'Журнал не отстал' --max-steps 2000000000 — генератор кода проверен своими примерами (прежний --self-test), и журнал совпадает с историей"
