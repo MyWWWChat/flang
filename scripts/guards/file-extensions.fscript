@@ -269,8 +269,8 @@
   обеспечивает «перепись идёт через ключ -c» результат содержит "-c"
   обеспечивает «перепись спрашивает у git, а не перечисляет руками» (элемент 2 в результат) содержит "git"
   пример «Места отбора спрашиваются у дерева одним заходом»
-    ожидается ["-c", "cd ../.. && git -c core.quotePath=false grep -l --untracked -E -e '(фп|фланг)([^[:alpha:]]|$)' -- ':!*.md' ':!docs/tasks/*' ':!changelog.json' ':!docs/site/changelog.json' ':!scripts/guards/file-extensions.fscript' ':!docs/benchmark*' ':!scripts/ledgers/link-guard-known-not-a-path.tsv'"]
-  ["-c", "cd ../.. && git -c core.quotePath=false grep -l --untracked -E -e '(фп|фланг)([^[:alpha:]]|$)' -- ':!*.md' ':!docs/tasks/*' ':!changelog.json' ':!docs/site/changelog.json' ':!scripts/guards/file-extensions.fscript' ':!docs/benchmark*' ':!scripts/ledgers/link-guard-known-not-a-path.tsv'"]
+    ожидается ["-c", "cd ../.. && git -c core.quotePath=false grep -l --untracked -E -e '(фп|фланг)([^[:alpha:]]|$)' -- ':!*.md' ':!docs/tasks/*' ':!changelog.json' ':!docs/site/changelog.json' ':!docs/release-notes.json' ':!scripts/guards/file-extensions.fscript' ':!docs/benchmark*' ':!scripts/ledgers/link-guard-known-not-a-path.tsv'"]
+  ["-c", "cd ../.. && git -c core.quotePath=false grep -l --untracked -E -e '(фп|фланг)([^[:alpha:]]|$)' -- ':!*.md' ':!docs/tasks/*' ':!changelog.json' ':!docs/site/changelog.json' ':!docs/release-notes.json' ':!scripts/guards/file-extensions.fscript' ':!docs/benchmark*' ':!scripts/ledgers/link-guard-known-not-a-path.tsv'"]
 
 тотальная функция «Строки»
   принимает текст: строка
